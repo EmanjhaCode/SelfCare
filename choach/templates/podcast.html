@@ -1,0 +1,58 @@
+{% extends 'basic.html' %}
+{% block body %}
+
+    <!-- Start Main content -->
+    <main class="bg-grey pb-30">
+        <div class="container single-content">
+            <div class="entry-header entry-header-style-1 mb-50 pt-50 text-center">
+                <h1 class="entry-title mb-20 font-weight-900 ">
+                  Podcast
+                </h1>
+            </div>
+            <!--end single header-->
+            <figure class="image mb-30 m-auto text-center border-radius-10">
+                <img class="border-radius-10" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/news-17.jpg" alt="post-title" />
+            </figure>
+            <!--figure-->
+            <article class="entry-wraper">
+                <p class="font-large">This is a space where ordinary people can find encouragement, inspiration, and motivation to share their extraordinary gifts with the world. We’ll dive into topics that stretch us and help us show up in the world as the best version of ourselves. As a life coach, entrepreneur, mom of 4, wife, a caregiver and the list really could go on, I have a ton of information to share. I’ll provide practical tips as well as valuable resources that will help you take your life to the next level.</p>
+
+                <h1 class="mt-30">Get in touch</h1>
+                <hr class="wp-block-separator is-style-wide">
+                <form class="form-contact comment_form" action="#" id="commentForm">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" name="name" id="name" type="text" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" name="website" id="website" type="text" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="button button-contactForm">Send message</button>
+                    </div>
+                </form>
+            </article>
+        </div>
+        <!--container-->
+    </main>
+    <!-- End Main content -->
+    <!-- Footer Start-->
+    {% include 'footer.html' %}
+
+    <!-- End Footer -->
+  {% endblock %}

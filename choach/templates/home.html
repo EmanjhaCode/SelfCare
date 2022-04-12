@@ -1,0 +1,330 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+{% if data %}
+<script>
+ alert(`{{data}}`);
+ window.open('/','_self');
+  </script>
+{% endif %}
+    <!-- Start Main content -->
+    <main style="background-image: url('../media/img/t4.jpeg');">
+        <div class="featured-1" style="background-image: url('../media/img/t4.jpeg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <p class="text-muted"><span class="typewrite d-inline" data-period="2000" data-type='[ " Travel Blogger. ", "Content Writter. ", "Food Guides " ]'></span></p>
+                        <hr>
+                        <h4 style="font-size:30px; color:blue; font-family:sans-serif;">Hello dear  <span >friends</span></h4>
+                        <hr>
+                        <h5 style="color:#000;">welcome to the safe space to grow and heal. .Lets join hands to make your soul's journey more calm and joyous. Together we go on a journey to learn from obstacles and reach unforseen heights.</h5>
+                        <form method='post' class="input-group form-subcriber mt-30 d-flex">
+                            {% csrf_token %}
+                            <input type="email" name="em" class="form-control bg-white font-small" placeholder="Enter your email">
+                            <button class="btn bg-primary text-white" type="submit">Get Newsletters</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 text-right d-none d-lg-block">
+                        <img src="../media/img/nidhi.jpg" alt="" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="loop-grid mb-30">
+                <div class="row">
+
+
+
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/img/nidhi1.JPG)">
+                                <a class="img-link" href="/meet-choach"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="/meet-choach" style="font-size:20px; color:#000;"><span class=" ">Meet Nidhi</span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/img/ser.JPG)">
+                                <a class="img-link" href="/services"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="/services" style="font-size:20px; color:#000;"><span class=" ">Services</span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/img/blog1.JPG)">
+                                <a class="img-link" href="/blog"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="/blog" style="font-size:20px; color:#000;"><span class=" ">Blogs</span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/img/connect.jpg)">
+                                <a class="img-link" href="/contact" ></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="/contact" style="font-size:20px; color:#000;"><span class=" ">Reach Us</span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/img/res.jpg)">
+                                <a class="img-link" href="/resources"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="/resources" style="font-size:20px; color:#000;"><span class=" ">Programs</span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/img/pro.JPG)">
+                                <a class="img-link" href="/#"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="/#" style="font-size:20px; color:#000;"><span class=" ">Products</span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-grey pt-50 pb-50" style="background-image: url('../media/img/t4.jpeg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="post-module-2">
+                            <div class="widget-header-1 position-relative mb-30  wow fadeInUp animated">
+                                <h5 class="mt-5 mb-30">Blog Section</h5>
+                            </div>
+                            <div class="loop-list loop-list-style-1">
+                                <div class="row">
+                                  {% for b in blog %}
+                                    <article class="col-md-6 mb-40 wow fadeInUp  animated">
+                                        <div class="post-card-1 border-radius-10 hover-up">
+                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/{{b.image}})">
+                                                <a class="img-link" href="blog/{{b.title}},{{b.id}}"></a>
+
+                                            </div>
+                                            <div class="post-content p-30">
+
+                                                <div class="d-flex post-card-content">
+                                                    <h5 class="post-title mb-20 font-weight-900">
+                                                        <a href="blog/{{b.title}},{{b.id}}">{{b.title}} </a>
+                                                    </h5>
+                                                    <div class="post-excerpt mb-25 font-small text-muted">
+                                                        <p>{{b.paragraph1|slice:":264"}}...</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="widget-area">
+
+
+                            <div class="sidebar-widget widget-latest-posts mb-50 wow fadeInUp animated">
+                                <div class="widget-header-1 position-relative mb-30">
+                                    <h5 class="mt-5 mb-30">Our Reviews</h5>
+                                </div>
+                                <div class="post-block-list post-module-2">
+                                    <ul class="list-post">
+                                        <li class="mb-30 wow fadeInUp animated">
+                                            <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
+                                                <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                                    <a class="color-white" href="single.html">
+                                                        <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/authors/author-2.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="post-content media-body">
+                                                    <p class="mb-10"><a href="author.html"><strong>David</strong></a>
+                                                        <span class="ml-15 font-small text-muted has-dot">16 Jan 2020</span>
+                                                    </p>
+                                                    <p class="text-muted font-small">A writer is someone for whom writing is more difficult than...</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-30 wow fadeInUp animated">
+                                            <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
+                                                <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                                    <a class="color-white" href="single.html">
+                                                        <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/authors/author-3.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="post-content media-body">
+                                                    <p class="mb-10"><a href="author.html"><strong>Kokawa</strong></a>
+                                                        <span class="ml-15 font-small text-muted has-dot">12 Feb 2020</span>
+                                                    </p>
+                                                    <p class="text-muted font-small">Striking pewter studded epaulettes silver zips</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="wow fadeInUp animated">
+                                            <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
+                                                <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                                    <a class="color-white" href="single.html">
+                                                        <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="post-content media-body">
+                                                    <p class="mb-10"><a href="author.html"><strong>Tsukasi</strong></a>
+                                                        <span class="ml-15 font-small text-muted has-dot">18 May 2020</span>
+                                                    </p>
+                                                    <p class="text-muted font-small">Workwear bow detailing a slingback buckle strap</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget widget_instagram wow fadeInUp animated">
+                                <div class="widget-header-1 position-relative mb-30">
+                                    <h5 class="mt-5 mb-30">Instagram</h5>
+                                </div>
+                                <div class="instagram-gellay">
+                                    <ul class="insta-feed">
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-2.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-3.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-4.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-5.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-6.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end -->
+                            <br>
+                            <!-- facebook -->
+                            <div class="sidebar-widget widget_instagram wow fadeInUp animated">
+                                <div class="widget-header-1 position-relative mb-30">
+                                    <h5 class="mt-5 mb-30">Facebook</h5>
+                                </div>
+                                <div class="instagram-gellay">
+                                    <ul class="insta-feed">
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-2.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-3.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-4.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-5.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-6.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <!-- end -->
+                            <!-- youtube -->
+                            <div class="sidebar-widget widget_instagram wow fadeInUp animated">
+                                <div class="widget-header-1 position-relative mb-30">
+                                    <h5 class="mt-5 mb-30">YouTube</h5>
+                                </div>
+                                <div class="instagram-gellay">
+                                    <ul class="insta-feed">
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-2.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-3.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-4.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-5.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-6.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End Main content -->
+
+    <!-- Footer Start-->
+
+
+    <!-- End Footer -->
+    {% endblock %}

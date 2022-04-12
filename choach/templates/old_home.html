@@ -1,0 +1,411 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+
+    <!-- Start Main content -->
+    <main style="background-image: url('../media/img/t4.jpeg');">
+        <div class="featured-1" style="background-image: url('../media/img/t4.jpeg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <p class="text-muted"><span class="typewrite d-inline" data-period="2000" data-type='[ " Travel Blogger. ", "Content Writter. ", "Food Guides " ]'></span></p>
+                        <hr>
+                        <h4 style="font-size:30px; color:blue; font-family:sans-serif;">Hello dear  <span >friends</span></h4>
+                        <hr>
+                        <h5 style="color:#000;">welcome to the safe space to grow and heal. .Lets join hands to make your soul's journey more calm and joyous. Together we go on a journey to learn from obstacles and reach unforseen heights.</h5>
+                        <form class="input-group form-subcriber mt-30 d-flex">
+                            <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
+                            <button class="btn bg-primary text-white" type="submit">Get Newsletters</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 text-right d-none d-lg-block">
+                        <img src="../media/img/nidhi.jpg" alt="" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="loop-grid mb-30">
+                <div class="row">
+                    <div class="col-lg-8 mb-30">
+                        <div class="carausel-post-1 hover-up border-radius-10 overflow-hidden transition-normal position-relative wow fadeInUp animated">
+                            <div class="arrow-cover"></div>
+                            <div class="slide-fade">
+                                <div class="position-relative post-thumb">
+                                    <div class="thumb-overlay img-hover-slide position-relative" style="background-image: url(https://demos.alithemes.com/html/stories/demo/assets/imgs/news/news-4.jpg)">
+                                        <a class="img-link" href="/contact"></a>
+                                        <div class="post-content-overlay text-white ml-30 mr-30 pb-30">
+                                            <h3 class="post-title font-weight-900 mb-20">
+                                                <a class="text-white" href="single.html">Do you feel like you never have enough time? Are you always busy but still not accomplishing your goals? </a>
+                                            </h3>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(http://demos.alithemes.com/html/stories/demo/assets/imgs/news/news-1.jpg)">
+                                <a class="img-link" href="/contact"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="d-flex post-card-content">
+                                    <h5 class="post-title mb-20 font-weight-900">
+                                        <a href="/contact">Are you ready to live your dreams?  Let’s explore your dreams</a>
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {% for s in service %}
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/{{s.image}})">
+                                <a class="img-link" href="services/{{s.title}},{{s.id}}"></a>
+
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="services/{{s.title}},{{s.id}}"><span class="post-cat text-warning">{{s.title}}</span></a>
+                                </div>
+                                <div class="d-flex post-card-content">
+                                    <h5 class="post-title mb-20 font-weight-900">
+                                        <a href="services/{{s.title}},{{s.id}}">{{s.paragraph1|slice:":70"}}...</a>
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-grey pt-50 pb-50" style="background-image: url('../media/img/t4.jpeg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="post-module-2">
+                            <div class="widget-header-1 position-relative mb-30  wow fadeInUp animated">
+                                <h5 class="mt-5 mb-30">Blog Section</h5>
+                            </div>
+                            <div class="loop-list loop-list-style-1">
+                                <div class="row">
+                                  {% for b in blog %}
+                                    <article class="col-md-6 mb-40 wow fadeInUp  animated">
+                                        <div class="post-card-1 border-radius-10 hover-up">
+                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(../media/{{b.image}})">
+                                                <a class="img-link" href="blog/{{b.title}},{{b.id}}"></a>
+
+                                            </div>
+                                            <div class="post-content p-30">
+
+                                                <div class="d-flex post-card-content">
+                                                    <h5 class="post-title mb-20 font-weight-900">
+                                                        <a href="blog/{{b.title}},{{b.id}}">{{b.title}} </a>
+                                                    </h5>
+                                                    <div class="post-excerpt mb-25 font-small text-muted">
+                                                        <p>{{b.paragraph1|slice:":264"}}...</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="widget-area">
+
+
+                            <div class="sidebar-widget widget-latest-posts mb-50 wow fadeInUp animated">
+                                <div class="widget-header-1 position-relative mb-30">
+                                    <h5 class="mt-5 mb-30">Our Reviews</h5>
+                                </div>
+                                <div class="post-block-list post-module-2">
+                                    <ul class="list-post">
+                                        <li class="mb-30 wow fadeInUp animated">
+                                            <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
+                                                <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                                    <a class="color-white" href="single.html">
+                                                        <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/authors/author-2.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="post-content media-body">
+                                                    <p class="mb-10"><a href="author.html"><strong>David</strong></a>
+                                                        <span class="ml-15 font-small text-muted has-dot">16 Jan 2020</span>
+                                                    </p>
+                                                    <p class="text-muted font-small">A writer is someone for whom writing is more difficult than...</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-30 wow fadeInUp animated">
+                                            <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
+                                                <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                                    <a class="color-white" href="single.html">
+                                                        <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/authors/author-3.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="post-content media-body">
+                                                    <p class="mb-10"><a href="author.html"><strong>Kokawa</strong></a>
+                                                        <span class="ml-15 font-small text-muted has-dot">12 Feb 2020</span>
+                                                    </p>
+                                                    <p class="text-muted font-small">Striking pewter studded epaulettes silver zips</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="wow fadeInUp animated">
+                                            <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
+                                                <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                                    <a class="color-white" href="single.html">
+                                                        <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="post-content media-body">
+                                                    <p class="mb-10"><a href="author.html"><strong>Tsukasi</strong></a>
+                                                        <span class="ml-15 font-small text-muted has-dot">18 May 2020</span>
+                                                    </p>
+                                                    <p class="text-muted font-small">Workwear bow detailing a slingback buckle strap</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget widget_instagram wow fadeInUp animated">
+                                <div class="widget-header-1 position-relative mb-30">
+                                    <h5 class="mt-5 mb-30">Instagram</h5>
+                                </div>
+                                <div class="instagram-gellay">
+                                    <ul class="insta-feed">
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-2.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-3.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-3.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-4.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-4.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-5.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="assets/imgs/thumbnail-5.jpg" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-6.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End Main content -->
+    <!--site-bottom-->
+    <div class="site-bottom pt-50 pb-50" style="background-image: url('../media/img/t4.jpeg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeInUp animated">
+                        <div class="widget-header-2 position-relative mb-30">
+                            <h5 class="mt-5 mb-30">Destinations</h5>
+                        </div>
+                        <div class="post-block-list post-module-1">
+                            <ul class="list-post">
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The Best Time to Travel to Cambodia</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">27 Jan</span>
+                                                <span class="post-by has-dot">13k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">20 Photos to Inspire You to Visit Cambodia</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">27 August</span>
+                                                <span class="post-by has-dot">14k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Epic Arts Cambodia: Charity for the Disabled</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">29 August</span>
+                                                <span class="post-by has-dot">23k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
+                        <div class="widget-header-2 position-relative mb-30">
+                            <h5 class="mt-5 mb-30">Lifestyle</h5>
+                        </div>
+                        <div class="post-block-list post-module-1">
+                            <ul class="list-post">
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-4.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">10 Ways to De-Stress Your Day Hour by Hour</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">12 August</span>
+                                                <span class="post-by has-dot">3k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-5.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">134 Free Weekly Meal Planner Printable</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">15 August</span>
+                                                <span class="post-by has-dot">4.1k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-6.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Free Printable Stickers for Your Bullet Journal</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">16 August</span>
+                                                <span class="post-by has-dot">2.2k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeInUp animated" data-wow-delay="0.4s">
+                        <div class="widget-header-2 position-relative mb-30">
+                            <h5 class="mt-5 mb-30">Photography</h5>
+                        </div>
+                        <div class="post-block-list post-module-1">
+                            <ul class="list-post">
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-7.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Which TBA Preset Pack is Right For You?</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">06 May</span>
+                                                <span class="post-by has-dot">23k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-8.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">How to Get Amazing Photos at the Pyramids of Giza</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">05 Jun</span>
+                                                <span class="post-by has-dot">5k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-30">
+                                    <div class="d-flex hover-up-2 transition-normal">
+                                        <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                                            <a class="color-white" href="single.html">
+                                                <img src="http://demos.alithemes.com/html/stories/demo/assets/imgs/news/thumb-9.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content media-body">
+                                            <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Beginner’s Guide to Travel Drone Photography</a></h6>
+                                            <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                                <span class="post-on">08 August</span>
+                                                <span class="post-by has-dot">2k views</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--container-->
+    </div>
+    <!--end site-bottom-->
+    <!-- Footer Start-->
+
+
+    <!-- End Footer -->
+    {% endblock %}

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Selfcarecoach | Chatbot</title>
+
+<link rel="icon" href="../media/chatbot/assets/img/favicon.ico">
+
+<link rel="stylesheet" href="../media/chatbot/assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="../media/chatbot/assets/plugins/fontawesome.min.css">
+<link rel="stylesheet" href="../media/chatbot/assets/plugins/all.min.css">
+
+<link rel="stylesheet" href="../media/chatbot/assets/plugins/jquery.mCustomScrollbar.css">
+
+<link rel="stylesheet" href="../media/chatbot/assets/css/app.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="main-wrapper container">
+
+<div class="content main_content">
+
+<div class="chat" id="middle">
+<div class="chat-header">
+<div class="user-details">
+<div class="d-lg-none ms-2">
+<ul class="list-inline mt-2 me-2">
+<li class="list-inline-item">
+<a class="text-muted px-0 left_side" href="#" data-chat="open">
+<i class="fas fa-arrow-left"></i>
+</a>
+</li>
+</ul>
+</div>
+
+<div class="mt-1">
+<img src="../media/choach/assets/logo/logo.png"  alt="image">
+</div>
+</div>
+<div class="chat-options">
+<ul class="list-inline">
+
+
+<li class="list-inline-item">
+
+<button type="button" onclick="tab1()"  class="btn btn-danger" name="button">End Chat</button>
+
+</li>
+<li class="list-inline-item">
+<a class="btn btn-outline-light" href="#" data-bs-toggle="dropdown">
+<button type="button" class="btn btn-success" name="button">Home</button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="chat-body"  id="bot">
+
+  </div>
+
+
+
+
+
+
+<div class="chat-footer " >
+<form id="myForm">
+  {% csrf_token %}
+<input type="text" class="form-control chat_form" id="nm" placeholder="Write a message.">
+<div class="form-buttons11">
+
+<button class="btn send-btn" type="button" onclick="tab()">
+<i class="fa fa-plane"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+
+ function tab(){
+
+     var feed = document.getElementById('nm').value;
+        var formData = {
+          'feed': feed,
+          'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+      };
+      $.ajax({
+              type: 'POST',
+              url: `chat_data`,
+              data: formData,
+              encode: true,
+              success:function(data){
+               $('#bot').load(`chat_data`).fadeIn("slow");
+               document.getElementById("myForm").reset();
+
+              }
+          })
+      }
+
+<!-- clear data -->
+function tab1(){
+     var formData = {
+       'feed': '0526cs1234',
+       'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+   };
+   $.ajax({
+           type: 'POST',
+           url: `chat_data`,
+           data: formData,
+           encode: true,
+           success:function(data){
+             $('#bot').load(`chat_data`).fadeIn("slow");
+           }
+
+       })
+   }
+
+
+  </script>
+  <script type="text/javascript">
+    $(function(){
+$("#addClass").click(function () {
+      $('#qnimate').addClass('popup-box-on');
+        });
+
+        $("#removeClass").click(function () {
+      $('#qnimate').removeClass('popup-box-on');
+        });
+})
+  </script>
+<script src="../media/chatbot/assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="../media/chatbot/assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="../media/chatbot/assets/js/jquery.nicescroll.min.js"></script>
+
+<script src="../media/chatbot/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load myfilter %}
+<div class="messages">
+{% for d,a1 in data %}
+
+<div class="chats chats-right">
+<div class="chat-content">
+<div class="message-content">
+{{a1|remove_quote|remove_back_slash|safe}}
+</div>
+
+</div>
+</div>
+
+
+<div class="chats">
+<div class="chat-avatar">
+<img src="../media/choach/assets/logo/favi.png" class="rounded-circle dreams_chat" alt="image">
+</div>
+<div class="chat-content">
+<div class="message-content" >
+{{d|remove_quote|remove_back_slash|safe}}
+</div>
+
+</div>
+</div>
+
+
+{% endfor %}
+
+
+
+</div>
