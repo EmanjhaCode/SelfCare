@@ -12,6 +12,14 @@ class ServicesAdmin(ImportExportModelAdmin):
     list_display = ['id','title','image','paragraph1','paragraph2','paragraph3']
 
 
+@admin.register(Products)
+class ProductsAdmin(ImportExportModelAdmin):
+    list_display = ['id','title','image','paragraph1','paragraph2','paragraph3']
+
+@admin.register(Programs)
+class ProgramsAdmin(ImportExportModelAdmin):
+    list_display = ['id','title','image','paragraph1','paragraph2','paragraph3']
+
 @admin.register(Contact)
 class ContactAdmin(ImportExportModelAdmin):
     list_display = ['id','name','email','no','msg']

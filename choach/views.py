@@ -29,11 +29,13 @@ def blog(request):
     blog = Blog.objects.all()
     return render(request,'blog.html',{'blog':blog})
 
-def press(request):
-    return render(request,'press.html')
+def product(request):
+    product = Products.objects.all()
+    return render(request,'press.html',{'blog':product})
 
-def resources(request):
-    return render(request,'resources.html')
+def program(request):
+    program = Programs.objects.all()
+    return render(request,'resources.html',{'blog':program})
 
 def contact(request):
     if request.method == 'POST':
